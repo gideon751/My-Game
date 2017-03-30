@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\LIFE\Exporter\Exporter.cs" />
      <Compile Include="Assets\Script\CreateObject.cs" />
      <Compile Include="Assets\Script\Destoryscript.cs" />
      <Compile Include="Assets\Script\DrumInventory.cs" />
