@@ -1,10 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\LoadingScreenManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Area730\UpdateManager\Editor\UpdatesWindow.cs">
     <Files>
       <File FileName="Assets\Script\MenuCamera.js" Line="1" Column="1" />
       <File FileName="Assets\Script\LoadingScreenManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\NextScene.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\DrumPickup.js" Line="9" Column="1" />
+      <File FileName="Assets\Script\PlayerDetector.cs" Line="1" Column="1" />
+      <File FileName="Assets\Area730\UpdateManager\Editor\UpdatesWindow.cs" Line="68" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

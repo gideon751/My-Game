@@ -5,14 +5,16 @@ using UnityEngine;
 public class CreateObject : MonoBehaviour {
 
 	public Transform Spawnpoint;
-	public GameObject Prefab;
+	public Transform SpawnDurm;
+	public GameObject Egbomen;
+	public GameObject Drum;
 	public float Delay;
 	private float spawned;
 
 
 
 	void Start () {
-		spawned = 0;
+		spawned = 1;
 
 	}
 
@@ -37,9 +39,18 @@ public class CreateObject : MonoBehaviour {
 
 		if (spawned <= 5) {
 
-		Instantiate (Prefab, Spawnpoint.position, Spawnpoint.rotation);
+			Instantiate (Egbomen, Spawnpoint.position, Spawnpoint.rotation);
 
+		}
+	}
+
+	public void Spawndrum(){
+		spawned += 1;
+
+		if (spawned <= 2) {
+
+			Instantiate (Drum, Spawnpoint.position, Spawnpoint.rotation);
+		}			
+	}
 }
-	}
-	}
 
