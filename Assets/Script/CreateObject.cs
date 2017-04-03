@@ -5,11 +5,12 @@ using UnityEngine;
 public class CreateObject : MonoBehaviour {
 
 	public Transform Spawnpoint;
-	public Transform SpawnDurm;
+	public Transform SpawnDrum;
 	public GameObject Egbomen;
 	public GameObject Drum;
 	public float Delay;
 	private float spawned;
+	public bool drumTriggered = false;
 
 
 
@@ -18,15 +19,26 @@ public class CreateObject : MonoBehaviour {
 
 	}
 
+	void Update()
+	{
+		if (drumTriggered) 
+		
+		{
+			Spawndrum ();
+		}
+	}
+
 	void OnTriggerEnter(Collider col) 
 	{
 		if (col.gameObject.tag == "Player") 
 		{
+			drumTriggered = true;
 			SpawnEnemy();
 			Invoke ("SpawnEnemy", 0.8f);
 			Invoke ("SpawnEnemy", 1.6f);
 			Invoke ("SpawnEnemy", 2.4f);
 			Invoke ("SpawnEnemy", 3.2f);
+			gameObject.GetComponent<BoxCollider> ().enabled = false;
 				
 
 		}
@@ -44,13 +56,11 @@ public class CreateObject : MonoBehaviour {
 		}
 	}
 
-	public void Spawndrum(){
-		spawned += 1;
+	public void Spawndrum()
+	    {
 
-		if (spawned <= 2) {
-
-			Instantiate (Drum, Spawnpoint.position, Spawnpoint.rotation);
+			Instantiate (Drum, SpawnDrum.position, SpawnDrum.rotation);
+		drumTriggered = false;
 		}			
 	}
-}
-
+	

@@ -53,7 +53,7 @@
      <Compile Include="Assets\Script\DrumPickup.cs" />
      <Compile Include="Assets\Script\EnemyMovement.cs" />
      <Compile Include="Assets\Script\ExitGame.cs" />
-     <Compile Include="Assets\Script\LoadingScreenManager.cs" />
+     <Compile Include="Assets\Script\MenuUI.cs" />
      <Compile Include="Assets\Script\NextScene.cs" />
      <Compile Include="Assets\Script\PlayerDead.cs" />
      <Compile Include="Assets\Script\PlayerDetector.cs" />

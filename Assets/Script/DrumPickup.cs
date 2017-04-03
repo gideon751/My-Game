@@ -3,6 +3,8 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 public class DrumPickup : MonoBehaviour {
 
+	public GameObject gate01;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -13,8 +15,11 @@ public class DrumPickup : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Player") 
 		{
-			SceneManager.LoadScene (2);
-			Destroy (gameObject);
+			gate01.GetComponent<BoxCollider> ().enabled = true;
+			gameObject.GetComponent<MeshRenderer>().enabled = false;
+			gameObject.GetComponent<AudioSource>().enabled = false;
 		}
 	}
 }
+
+

@@ -1,13 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Area730\UpdateManager\Editor\UpdatesWindow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\DrumInventory.cs">
     <Files>
       <File FileName="Assets\Script\MenuCamera.js" Line="1" Column="1" />
-      <File FileName="Assets\Script\LoadingScreenManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\NextScene.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\DrumPickup.js" Line="9" Column="1" />
-      <File FileName="Assets\Script\PlayerDetector.cs" Line="1" Column="1" />
-      <File FileName="Assets\Area730\UpdateManager\Editor\UpdatesWindow.cs" Line="68" Column="1" />
+      <File FileName="Assets\Script\NextScene.cs" Line="16" Column="2" />
+      <File FileName="Assets\Script\DrumPickup.js" Line="1" Column="1" />
+      <File FileName="Assets\Area730\UpdateManager\Editor\UpdatesWindow.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\CreateObject.cs" Line="31" Column="1" />
+      <File FileName="Assets\Script\Destoryscript.cs" Line="31" Column="25" />
+      <File FileName="Assets\Script\loadlevel.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\MenuUI.cs" Line="28" Column="22" />
+      <File FileName="Assets\Script\DrumPickup1.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\DrumPickup.cs" Line="23" Column="2" />
+      <File FileName="Assets\Script\DrumInventory.cs" Line="45" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

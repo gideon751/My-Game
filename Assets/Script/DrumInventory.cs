@@ -42,7 +42,7 @@ public class DrumInventory : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		if (Drum1.tag == "Drum1")
+
 		if (other.gameObject.tag == "Drum1")
 
 		{
