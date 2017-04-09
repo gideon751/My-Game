@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerDead : MonoBehaviour {
 	public Spawnitems spawnItemsScript;
@@ -35,7 +36,11 @@ public class PlayerDead : MonoBehaviour {
 
 			if (Health <= 0) {
 
-				GameOver ();
+				GameOver (); 
+				{
+					SceneManager.LoadScene(1);
+				}
+				Cursor.visible = false;
 				Debug.Log ("Collision");
 			}
 		}

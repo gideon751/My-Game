@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CreateObject : MonoBehaviour {
 
@@ -8,6 +9,7 @@ public class CreateObject : MonoBehaviour {
 	public Transform SpawnDrum;
 	public GameObject Egbomen;
 	public GameObject Drum;
+	//public Text;
 	public float Delay;
 	private float spawned;
 	public bool drumTriggered = false;
@@ -61,6 +63,13 @@ public class CreateObject : MonoBehaviour {
 
 			Instantiate (Drum, SpawnDrum.position, SpawnDrum.rotation);
 		drumTriggered = false;
-		}			
-	}
+		}
+
+//	public void Text()
+//	{
+//
+//		Instantiate (Text, SpawnDrum.position, SpawnDrum.rotation);
+//		drumTriggered = false;
+//	}		
+}
 	
