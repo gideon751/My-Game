@@ -31,7 +31,7 @@ public class PlayerDead : MonoBehaviour {
 		if (other.gameObject.tag == "Enemy") {
 			other.gameObject.transform.eulerAngles = new Vector3 (0, 0, 0);
 			DestroyTarget = other.gameObject;
-			Destroy (DestroyTarget);
+			//Destroy (DestroyTarget);
 			Health -= 1;
 
 			if (Health <= 0) {

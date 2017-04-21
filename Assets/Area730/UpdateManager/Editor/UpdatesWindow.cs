@@ -461,7 +461,8 @@ namespace Area730.UpdatesManager
             const int scrollAreaHeight = 150;
 
 
-            if (UpdatePlugins.pluginsToUpdate.Count > 0)
+			if (UpdatePlugins.pluginsToUpdate.Count > 0)
+				;
             {
                 const int btnHeight = 40;
                 const int btnSpace = 7;
@@ -494,7 +495,7 @@ namespace Area730.UpdatesManager
 
                 GUI.EndScrollView();
             }
-            else
+            //else
             {
                 GUI.Label(new Rect(x, 40, width, 100), "<size=15><b>All plugins are up-to-date</b></size>", guiStyle);
             }
