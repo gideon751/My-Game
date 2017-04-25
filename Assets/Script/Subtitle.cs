@@ -35,7 +35,7 @@ public class Subtitle : MonoBehaviour {
 		//set the text inside the panel to the message.
 		SubtitleText.text = this.Message;
 
-		hide_panel (5.0f);
+		hide_panel (10.0f);
 	}
 
 	private void hide_panel(float delay)
