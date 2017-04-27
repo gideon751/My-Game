@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Subtitle : MonoBehaviour {
 
 	public static GameObject SubtitlePanel;
-	public static Text SubtitleText;
+	public static Image SubtitleText;
 
 	public string Message = "Message not set!";
 
@@ -16,7 +16,7 @@ public class Subtitle : MonoBehaviour {
 		if (SubtitlePanel == null) 
 		{
 			SubtitlePanel = GameObject.Find ("SubtitlePanel");
-			SubtitleText = SubtitlePanel.GetComponentInChildren<Text> ();
+			SubtitleText = SubtitlePanel.GetComponentInChildren<Image> ();
 
 			SubtitlePanel.SetActive (false);
 		}
@@ -33,7 +33,8 @@ public class Subtitle : MonoBehaviour {
 		//activate the subtitle panel object
 		SubtitlePanel.SetActive (true);
 		//set the text inside the panel to the message.
-		SubtitleText.text = this.Message;
+		SubtitleText.enabled = true;
+
 
 		hide_panel (10.0f);
 	}

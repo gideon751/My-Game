@@ -23,11 +23,12 @@ public class Destoryscript : MonoBehaviour
 	{
 		if (col.gameObject.tag == "Player") 
 		{
+			/*
 			foreach (GameObject enemy in enemies) 
 			{
 				GameObject.Destroy (enemy);
 			}
-
+			*/
 			Destroy (gameObject);
 
 		}
