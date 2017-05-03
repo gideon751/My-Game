@@ -5,22 +5,14 @@ using UnityEngine.UI;
 
 public class Subtitle : MonoBehaviour {
 
-	public static GameObject SubtitlePanel;
-	public static Image SubtitleText;
-
+	public GameObject SubtitleText;
+	public GameObject SubtitlePanel;
 	public string Message = "Message not set!";
 
 	// Use this for initialization
 	void Start () {
 
-		if (SubtitlePanel == null) 
-		{
-			SubtitlePanel = GameObject.Find ("SubtitlePanel");
-			SubtitleText = SubtitlePanel.GetComponentInChildren<Image> ();
 
-			SubtitlePanel.SetActive (false);
-		}
-		
 	}
 	
 	// Update is called once per frame
@@ -31,22 +23,30 @@ public class Subtitle : MonoBehaviour {
 	void OnTriggerEnter()
 	{
 		//activate the subtitle panel object
-		SubtitlePanel.SetActive (true);
+		//SubtitlePanel.SetActive (true);
 		//set the text inside the panel to the message.
-		SubtitleText.enabled = true;
+		SubtitleText.SetActive(true);
+		SubtitlePanel.SetActive(true);
 
 
-		hide_panel (10.0f);
+		//hide_panel (10.0f);
 	}
-
-	private void hide_panel(float delay)
+	void OnTriggerExit()
 	{
-		StartCoroutine (cr_delayed_hide_panel (delay));
+		//SubtitlePanel.SetActive (false);
+		SubtitleText.SetActive(false);
+		SubtitlePanel.SetActive(false);
 	}
 
-	private IEnumerator cr_delayed_hide_panel(float delay)
-	{
-		yield return new WaitForSeconds (delay);
-		SubtitlePanel.SetActive (false);
-	}
+
+	//private void hide_panel(float delay)
+	//{
+	//	StartCoroutine (cr_delayed_hide_panel (delay));
+	//}
+
+	//private IEnumerator cr_delayed_hide_panel(float delay)
+	//{
+	//	yield return new WaitForSeconds (delay);
+	//	SubtitlePanel.SetActive (false);
+	//}
 }

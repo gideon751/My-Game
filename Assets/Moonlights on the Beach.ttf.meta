@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 43390a4b536846f4f9146b144d8afa64
+timeCreated: 1493819694
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 64
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Moonlights on the Beach
+  fontNames:
+  - Moonlights on the Beach
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
