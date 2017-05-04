@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 4c65a47e762b6d54c9fcf3c6240b5bac
+timeCreated: 1493915583
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 64
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Arabic Magic
+  fontNames:
+  - Arabic Magic
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

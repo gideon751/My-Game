@@ -55,6 +55,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+			m_baseSpeed = m_WalkSpeed;
         }
 
 
@@ -90,7 +91,20 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_AudioSource.Play();
             m_NextStep = m_StepCycle + .5f;
         }
+		float m_baseSpeed;
+		public void OnTriggerEnter(Collider other)
+		{
+			if (other.gameObject.tag == "Boost") 
+			{
+				m_WalkSpeed = m_RunSpeed; 
+				Invoke ("ReturnToWalk", 3f);
+			}
+		}
 
+		void ReturnToWalk()
+		{
+			m_WalkSpeed = m_baseSpeed;
+		}
 
         private void FixedUpdate()
         {

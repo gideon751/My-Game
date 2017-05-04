@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 8112309284429384fb3475f2637db015
+timeCreated: 1493917173
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 64
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Death to Metal
+  fontNames:
+  - Death to Metal
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

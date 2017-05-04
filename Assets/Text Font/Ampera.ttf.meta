@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: e823cefd7b21ee84e9da376631d850cb
+timeCreated: 1493904487
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 32
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Ampera
+  fontNames:
+  - Ampera
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
