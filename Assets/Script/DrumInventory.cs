@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DrumInventory : MonoBehaviour {
 
 	public bool Drum1Collected;
 	public GameObject DestroyTarget;
-	public float DrumCountFloat;
+	public int DrumCountNumber;
 	public Text Drum1Text;
 	public Text DrumCount;
 	public GameObject Drum1;
@@ -16,12 +17,10 @@ public class DrumInventory : MonoBehaviour {
 	public GameObject Gate3;
 	public GameObject Gate4;
 	public GameObject Gate5;
-	Spin Gate1Script;
-	Spin Gate2Script;
-	Spin Gate3Script;
-	Spin Gate4Script;
-	Spin Gate5Script;
 
+	public AudioSource GateOpenSound;
+
+	List<ai> egboMen = new List<ai> ();
 
 
 
@@ -30,14 +29,14 @@ public class DrumInventory : MonoBehaviour {
 
 		// all drums can be drum1
 		Drum1Collected = false;
-		Drum1Text.text = "No Drum";
-		DrumCountFloat = 0;
+		Drum1Text.text = "Fined The Drums";
+		DrumCountNumber = 0;
 	}
 
 	// Update is called once per frame
 	void Update () {
 
-		DrumCount.text = "Drums collected : " + DrumCountFloat.ToString ();
+		DrumCount.text = "Drums collected : " + DrumCountNumber.ToString ();
 
 	}
 
@@ -46,30 +45,56 @@ public class DrumInventory : MonoBehaviour {
 		if (other.gameObject.tag == "Drum1")
 
 		{
-			DrumCountFloat += 1;
+			DrumCountNumber += 1;
 			Drum1Collected = true;
 			Drum1Text.text = "Drum Collected";
 			DestroyTarget = other.gameObject;
 			Destroy (DestroyTarget);
 
 		}
+
+		if (other.gameObject.tag == "TheTree") 
+		{
+			if (DrumCountNumber == 5) {
+				SceneManager.LoadScene ("Credit"); // win
+			} else {
+				SceneManager.LoadScene ("Game Over"); // lose
+			}
+		}
+
 		if (other.gameObject.tag == "GateLever1") {
-			Drum1Collected = false;
-			Drum1Text.text = "No Drum";
-			Gate1Script = Gate1.GetComponent<Spin> ();
-			Gate1Script.Opened = true;
-
-			//make new GateLever objects, 2,3,4,5......
-
+			HitALever (Gate1);
+			GateOpenSound.Play ();
 		}
 		if (other.gameObject.tag == "GateLever2") {
-			Drum1Collected = false;
-			Drum1Text.text = "No Drum";
-			Gate2Script = Gate2.GetComponent<Spin> ();
-			Gate2Script.Opened = true;
+			HitALever (Gate2);
+			GateOpenSound.Play ();
+		}
+		if (other.gameObject.tag == "GateLever3") {
+			HitALever (Gate3);
+			GateOpenSound.Play ();
+		}
+		if (other.gameObject.tag == "GateLever4") {
+			HitALever (Gate4);
+			GateOpenSound.Play ();
+		}
+	}
 
-			//make new GateLever objects, 2,3,4,5......
+	void BeingChased(ai egboMan)
+	{
+		egboMen.Add (egboMan);
+	}
 
+	void HitALever(GameObject gate)
+	{
+		Drum1Collected = false;
+		Drum1Text.text = "Fined The Drums";
+		Spin spinScript = gate.GetComponent<Spin> ();
+
+		spinScript.Opened = true;
+		foreach (ai enemy in egboMen) {
+
+			Destroy (enemy.gameObject);
 		}
 	}
 }

@@ -47,18 +47,23 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\LIFE\Exporter\Exporter.cs" />
+     <Compile Include="Assets\Script\Clicked.cs" />
      <Compile Include="Assets\Script\CreateObject.cs" />
      <Compile Include="Assets\Script\Destoryscript.cs" />
+     <Compile Include="Assets\Script\DestroyFooFoo.cs" />
      <Compile Include="Assets\Script\DrumInventory.cs" />
      <Compile Include="Assets\Script\DrumPickup.cs" />
      <Compile Include="Assets\Script\EnemyMovement.cs" />
      <Compile Include="Assets\Script\ExitGame.cs" />
+     <Compile Include="Assets\Script\GateSound.cs" />
      <Compile Include="Assets\Script\MenuUI.cs" />
      <Compile Include="Assets\Script\NextScene.cs" />
      <Compile Include="Assets\Script\NextStage.cs" />
+     <Compile Include="Assets\Script\PauseMenu.cs" />
      <Compile Include="Assets\Script\PlayerDead.cs" />
      <Compile Include="Assets\Script\PlayerDetector.cs" />
      <Compile Include="Assets\Script\Respawn.cs" />
+     <Compile Include="Assets\Script\Rotating.cs" />
      <Compile Include="Assets\Script\SafeZone.cs" />
      <Compile Include="Assets\Script\ShowCursor.cs" />
      <Compile Include="Assets\Script\SpawnMap.cs" />
@@ -66,6 +71,7 @@
      <Compile Include="Assets\Script\Spin.cs" />
      <Compile Include="Assets\Script\Subtitle.cs" />
      <Compile Include="Assets\Script\Sun.cs" />
+     <Compile Include="Assets\Script\Tree.cs" />
      <Compile Include="Assets\Script\ai.cs" />
      <Compile Include="Assets\Script\aiEasy.cs" />
      <Compile Include="Assets\Script\loadlevel.cs" />

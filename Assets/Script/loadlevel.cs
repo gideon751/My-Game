@@ -5,9 +5,17 @@ using UnityEngine.SceneManagement;
 public class loadlevel : MonoBehaviour {
 
 	public string levelName;
-	void update (){
+
+	void Start(){
+		//Cursor.visible = true;
+
+	
+	}
+
+	void Update (){
 		Cursor.visible = true;
-		Cursor.lockState = CursorLockMode.Confined;
+		Cursor.lockState = CursorLockMode.None;
+		//Cursor.lockState = CursorLockMode.Confined;
 	}
 	//Update is called once per frame
 	public void LoadLevelNow (string x) {

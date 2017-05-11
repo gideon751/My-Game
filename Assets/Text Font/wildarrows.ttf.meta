@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 34184f39df7e382469e35b8c6afede5c
+timeCreated: 1494248000
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 160
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Wild Arrows
+  fontNames:
+  - Wild Arrows
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 3
+  ascentCalculationMode: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

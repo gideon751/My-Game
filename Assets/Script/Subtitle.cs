@@ -7,6 +7,7 @@ public class Subtitle : MonoBehaviour {
 
 	public GameObject SubtitleText;
 	public GameObject SubtitlePanel;
+	public AudioSource voiceSFX;
 	public string Message = "Message not set!";
 	bool isEntered;
 	bool isOn;
@@ -36,16 +37,21 @@ public class Subtitle : MonoBehaviour {
 			SubtitlePanel.SetActive (true);
 			isOn = true;
 			isEntered = true;
+			//AudioSource.PlayClipAtPoint(voiceSFX.clip, transform.position);
+			voiceSFX.Play();
 		}
 		//hide_panel (10.0f);
 	}
-	void OnTriggerExit()
+	void OnTriggerExit(Collider other)
 	{
-		//SubtitlePanel.SetActive (false);
-		SubtitleText.SetActive(false);
-		SubtitlePanel.SetActive(false);
-		isOn = false;
-		isEntered = false;
+		if (other.gameObject.tag == "Player") {
+			//SubtitlePanel.SetActive (false);
+			SubtitleText.SetActive (false);
+			SubtitlePanel.SetActive (false);
+			voiceSFX.Stop ();
+			isOn = false;
+			isEntered = false;
+		}
 	}
 
 

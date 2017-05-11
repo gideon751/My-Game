@@ -12,8 +12,7 @@ public class CreateObject : MonoBehaviour {
 	//public Text;
 	public float Delay;
 	private float spawned;
-	public bool drumTriggered = false;
-
+	GameObject player;
 
 
 	void Start () {
@@ -21,20 +20,12 @@ public class CreateObject : MonoBehaviour {
 
 	}
 
-	void Update()
-	{
-		if (drumTriggered) 
-		
-		{
-			Spawndrum ();
-		}
-	}
-
 	void OnTriggerEnter(Collider col) 
 	{
 		if (col.gameObject.tag == "Player") 
 		{
-			drumTriggered = true;
+			player = col.gameObject;
+			Spawndrum ();
 			SpawnEnemy();
 			Invoke ("SpawnEnemy", 0.8f);
 			Invoke ("SpawnEnemy", 1.6f);
@@ -53,16 +44,14 @@ public class CreateObject : MonoBehaviour {
 
 		if (spawned <= 5) {
 
-			Instantiate (Egbomen, Spawnpoint.position, Spawnpoint.rotation);
-
+			GameObject egboMan = Instantiate (Egbomen, Spawnpoint.position, Spawnpoint.rotation);
+			player.SendMessage ("BeingChased", egboMan.GetComponent<ai> ());
 		}
 	}
 
 	public void Spawndrum()
 	    {
-
 			Instantiate (Drum, SpawnDrum.position, SpawnDrum.rotation);
-		drumTriggered = false;
 		}
 
 //	public void Text()

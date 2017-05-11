@@ -35,12 +35,14 @@ public class PlayerDead : MonoBehaviour {
 			Health -= 1;
 
 			if (Health <= 0) {
-
+	//			Cursor.visible = true;
 				GameOver (); 
 				{
-					SceneManager.LoadScene(1);
+					Cursor.visible = true;
+
+					SceneManager.LoadScene(2);
 				}
-				Cursor.visible = false;
+
 				Debug.Log ("Collision");
 			}
 		}

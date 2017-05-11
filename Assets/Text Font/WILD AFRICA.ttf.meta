@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 2459c06d43b441146b4117df592a81f4
+timeCreated: 1494247694
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 64
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: WILD AFRICA
+  fontNames:
+  - WILD AFRICA
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
